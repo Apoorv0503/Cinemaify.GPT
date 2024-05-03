@@ -64,8 +64,6 @@ const Login = () => {
               })
             );
 
-            navigate("/browse");
-
           }).catch((error) => {
               setErrorMessage(error.message);
               // navigate("/error");
@@ -85,8 +83,6 @@ const Login = () => {
         .then((userCredential) => {
 
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
