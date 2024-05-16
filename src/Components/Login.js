@@ -8,6 +8,7 @@ import { addUser } from "../Utils/userSlice";
 // import apoorvaDP from "../Assests/apoorvaDP.png"
 import {auth} from "../Utils/firebase";
 import { useNavigate } from "react-router-dom";
+import {UserAvatar} from "../Utils/Constants";
 
 
 const Login = () => {
@@ -50,7 +51,7 @@ const Login = () => {
 
 //adding some desired fields to the recieved user object, updating the user recieved after sign-up
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/55045256?v=4"
+            displayName: name.current.value, photoURL: UserAvatar
           }).then(() => {
             //on succesful updation, extract the values from latest user (auth.currentUser, not the "user" in line 49)
             //and dispatch an addUser action again to update the user in tha store (need to update its displayName and photoURL)
