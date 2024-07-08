@@ -29,6 +29,7 @@ const useMovieTrailer = (movieId) => {
   };
 
   useEffect(() => {
+    // memoization
     !trailerVideo && getMovieVideos();
   }, []);
 };
