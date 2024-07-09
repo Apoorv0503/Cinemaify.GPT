@@ -98,11 +98,11 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute ">
-        <img src={HomeBackground} alt="home-background" />
+      <div className="fixed">
+        <img className="md:w-screen h-screen object-cover" src={HomeBackground} alt="home-background" />
       </div>
       <form
-        className="absolute w-3/12 p-12  my-36 right-0 left-0 mx-auto  text-white bg-black bg-opacity-80 rounded-lg"
+        className="absolute md:w-3/12 w-[85%] md:p-15 px-10 py-4 md:mt-36 mt-44 mb-36 right-0 left-0 mx-auto  text-white bg-black bg-opacity-80 rounded-lg"
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl py-4">

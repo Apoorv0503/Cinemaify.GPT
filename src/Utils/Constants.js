@@ -4,7 +4,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: "Bearer"+process.env.REACT_APP_TMDB_KEY
+    Authorization: "Bearer "+process.env.REACT_APP_TMDB_KEY
   }
 };
 
@@ -19,6 +19,7 @@ export const SUPPORTED_LANGUAGES=[
 
 
 // gemini key
+
 export const GEMINIAI_KEY=process.env.REACT_APP_GEMINIAI_KEY;
 
 //gemini post url

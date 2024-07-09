@@ -8,21 +8,21 @@ const SecondaryContainer = () => {
 
   return (
     movies.nowPlaying && (
-      <div className="bg-black">
+      <div className="bg-black mt-[-4rem]">
         {/* given -ve top margin so that this content float over the bottom of trailer, while the black bg will start after the trailer div */}
-        <div className="-mt-52 pb-4 pl-4 relative z-20">
+        <div className="md:-mt-52 mt-[15%] pb-4 pl-4 relative z-20">
           <MovieList title={"Now Playing"} movies={movies.nowPlaying} />
           <MovieList title={"Popular"} movies={movies.popular} />
           <MovieList title={"Top Rated"} movies={movies.topRated} />
           <MovieList title={"Upcoming"} movies={movies.upcoming} />
           <h3 className="text-center text-white">
-            Created by
+            Created by{" : "}
             <a
               className="no-underline"
               href="https://www.linkedin.com/in/apoorva-dwivedi-6717b7185/"
               target="_blank"
             >
-              Apoorva Dwivedi
+               Apoorva Dwivedi
             </a>
           </h3>
         </div>

@@ -74,15 +74,15 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44" src={Netflix} alt="logo-img" />
+    <div className="absolute w-full md:px-8 py-2 bg-gradient-to-b from-black z-10 flex md:flex-row flex-col justify-between">
+      <img className="w-44 mx-auto md:mx-0" src={Netflix} alt="logo-img" />
 
       {user && (
-        <div className="py-2 px-6 flex  items-center">
+        <div className="py-2 md:px-6 px-3 flex items-center justify-between">
 
           {/* select language dropdown */}
          {showGptSearch && 
-          <select onChange={handleLanguageChange} className="mx-3 p-1">
+          <select onChange={handleLanguageChange} className="mx-3 md:p-1">
             {
               SUPPORTED_LANGUAGES.map((lang)=>{
                 return <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
@@ -103,7 +103,7 @@ const Header = () => {
           <img
             // src={user?.photoURL} we will use default netflix profile icon for now
             src={profile}
-            className="w-10 h-10 rounded-sm mx-1"
+            className="md:w-10 md:h-10 w-6 h-6 rounded-sm mx-1"
             alt="user_icon"
           />
           <button className="text-white font-semibold" onClick={handleSignOut}>

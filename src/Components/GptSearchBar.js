@@ -11,7 +11,7 @@ import {addGptMovieResult} from "../Utils/gptSlice";
 import GptMovieSuggestions from "./GptMovieSuggestions";
 
 const GptSearchBar = () => {
-    const[isInputFound,setIsInputFound]=useState(false);
+    // const[isInputFound,setIsInputFound]=useState(false);
   const searchText = useRef(null);
 
   //get the currently selected language from the redux store's config slice
@@ -41,7 +41,6 @@ const searchMovieTMDB=async(movie)=>{
     searchText.current.value +
     ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya.";
 
-    setIsInputFound(true);
 
     //data to be send to the gemini api
     const data = {
@@ -100,9 +99,9 @@ const searchMovieTMDB=async(movie)=>{
   };
 
   return (
-    <div className="pt-[10%] flex justify-center items-center">
+    <div className="md:pt-[10%] pt-[42%] file:flex justify-center items-center">
       <form
-        className="w-1/2 bg-black grid grid-cols-12 rounded-sm"
+        className="md:w-1/2 w-[80%] bg-black grid grid-cols-12 rounded-sm mx-auto"
         onSubmit={(e) => e.preventDefault()}
       >
         <input

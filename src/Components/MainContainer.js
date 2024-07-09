@@ -20,7 +20,7 @@ const MainContainer = () => {
   
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden pt-[32%] bg-black md:pt-0">
       <VideoTitle title={original_title} overview={overview}/>
       <VideoBackground movieId={id}/>
     </div>
